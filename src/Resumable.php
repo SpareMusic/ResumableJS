@@ -137,6 +137,18 @@ class Resumable
     }
 
     /**
+     * Respond to HTTP request
+     *
+     * @param string $message
+     *
+     * @return mixed
+     */
+    public function respond($message = "")
+    {
+        return response($message, $this->getStatusCode());
+    }
+
+    /**
      * @param bool $ext
      *
      * @return mixed
