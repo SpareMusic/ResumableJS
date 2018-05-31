@@ -1,0 +1,17 @@
+{
+    "name": "sparemusic/resumable-js",
+    "type": "library",
+    "require": {
+        "laravel/framework": "^5.0.0"
+    },
+    "autoload": {
+        "psr-4": { "SpareMusic\\ResumableJS\\": "src" }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SpareMusic\\ResumableJS\\Providers\\ResumableServiceProvider"
+            ]
+        }
+    }
+}

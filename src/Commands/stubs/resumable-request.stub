@@ -1,0 +1,26 @@
+<?php
+
+namespace DummyNamespace;
+
+use SpareMusic\ResumableJS\Resumable;
+use Illuminate\Support\Facades\Storage;
+use SpareMusic\ResumableJS\ResumableParameters;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
+class DummyClass extends Resumable
+{
+    /**
+     * Setup resumable instance
+     */
+    public function setup()
+    {
+        $chunkPath = Storage::disk('local')->path('/chunks'); // TODO
+        $uploadPath = Storage::disk('local')->path('/uploads'); // TODO
+
+        $this->setChunkPath($chunkPath)
+            ->setUploadPath($uploadPath)
+            ->setValidator(function (UploadedFile $file, ResumableParameters $parameters) {
+                return true;
+            });
+    }
+}
