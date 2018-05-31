@@ -4,6 +4,7 @@
     "require": {
         "laravel/framework": "^5.0.0"
     },
+    "license": "MIT",
     "autoload": {
         "psr-4": { "SpareMusic\\ResumableJS\\": "src" }
     },
