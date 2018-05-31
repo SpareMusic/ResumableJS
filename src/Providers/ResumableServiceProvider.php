@@ -28,6 +28,10 @@ class ResumableServiceProvider extends ServiceProvider
 
             return new Resumable($request);
         });
+
+        $this->app->resolving(Resumable::class, function ($resumable, $app) {
+            $resumable->setup();
+        });
     }
 
     /**

@@ -35,8 +35,6 @@ class Resumable
         }
         $this->request = $request;
         $this->resumableParameters = new ResumableParameters($this->request);
-
-        $this->setup();
     }
 
     /**
