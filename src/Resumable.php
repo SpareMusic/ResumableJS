@@ -147,6 +147,16 @@ class Resumable
     }
 
     /**
+     * Get full file path
+     *
+     * @return string
+     */
+    public function getFilepath()
+    {
+        return $this->getUploadPath() . "/" . $this->getFilename(true);
+    }
+
+    /**
      * @param bool $ext
      *
      * @return mixed
