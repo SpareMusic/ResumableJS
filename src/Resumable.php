@@ -3,10 +3,10 @@
 namespace SpareMusic\ResumableJS;
 
 use SplFileInfo;
+use RuntimeException;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Filesystem\Filesystem;
-use SebastianBergmann\GlobalState\RuntimeException;
 
 class Resumable
 {
@@ -109,8 +109,6 @@ class Resumable
     /**
      * Assembles chunks that have been uploaded. Based on Chris Gregory's code found inside the samples folder of
      * resumable.js (https://github.com/23/resumable.js/blob/master/samples/Backend%20on%20PHP.md)
-     *
-     * @return bool|string Returns either false on failure or the upload path + filename of uploaded file
      */
     protected function createFileFromChunks()
     {
