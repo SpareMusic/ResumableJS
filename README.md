@@ -49,8 +49,8 @@ public function setup()
 }
 ```
 
-The `$chunkPath` variable is the directory to store all the chunks of the uploaded file (the directory will be created if it doesn't already exist).
-The `$uploadPath` variable is the directory to store the completed upload (the directory will be created if it doesn't already exist).
+The `$chunkPath` variable is the directory to store all the chunks of the uploaded file (the directory will be created if it doesn't already exist).  
+The `$uploadPath` variable is the directory to store the completed upload (the directory will be created if it doesn't already exist).  
 The validator validates the uploaded file. If it returns false, it cancels the upload. Otherwise, it continues running.
 
 ### Routing
