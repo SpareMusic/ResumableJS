@@ -222,8 +222,8 @@ class Resumable
     public function setUploadPath($uploadPath)
     {
         $this->uploadPath = $uploadPath;
-        if (false === is_dir($this->uploadPath)) {
-            $this->fs->makeDirectory($this->uploadPath, 777, true, true);
+        if (!$this->fs->exists($this->uploadPath)) {
+            $this->fs->makeDirectory($this->uploadPath, 0777, true, true);
         }
         return $this;
     }
